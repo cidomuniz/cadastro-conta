@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
-    <RootNamespace>cadastro_conta_wepapi</RootNamespace>
+    <RootNamespace>cadastro_conta.webapi</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>

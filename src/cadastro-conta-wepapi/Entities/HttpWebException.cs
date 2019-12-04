@@ -2,13 +2,21 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
+using System.Runtime.Serialization;
 using System.Threading.Tasks;
 
-namespace cadastro_conta_wepapi.Entities
+namespace cadastro_conta.webapi.Entities
 {
+    [Serializable]
     public class HttpWebException : WebException
     {
-        public int StatusCode { get; set; }
-        public string Message { get; set; }
+        public HttpStatusCode StatusCode { get; set; }
+        public string Mensagem { get; set; }
+
+        public HttpWebException(HttpStatusCode statusCode, string mensagem)
+        {
+            StatusCode = statusCode;
+            Mensagem = mensagem;
+        }
     }
 }

@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 
-namespace cadastro_conta_wepapi.Controllers
+namespace cadastro_conta.webapi.Controllers
 {
     [ApiController]
     [Route("[controller]")]

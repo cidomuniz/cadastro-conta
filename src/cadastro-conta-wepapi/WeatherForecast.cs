@@ -1,7 +1,7 @@
 using System;
 
-namespace cadastro_conta_wepapi
-{
+namespace cadastro_conta.webapi
+{ 
     public class WeatherForecast
     {
         public DateTime Date { get; set; }

@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29519.181
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "cadastro-conta-wepapi", "cadastro-conta-wepapi\cadastro-conta-wepapi.csproj", "{7C04D86A-E13B-44C3-9A54-4B755AA91D41}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "cadastro-conta.webapi", "cadastro-conta-wepapi\cadastro-conta.webapi.csproj", "{7C04D86A-E13B-44C3-9A54-4B755AA91D41}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "cadastro-conta.test", "cadastro-conta.test\cadastro-conta.test.csproj", "{CA3D00B7-A200-4CE5-91D2-66ABA921F526}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{7C04D86A-E13B-44C3-9A54-4B755AA91D41}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7C04D86A-E13B-44C3-9A54-4B755AA91D41}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7C04D86A-E13B-44C3-9A54-4B755AA91D41}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CA3D00B7-A200-4CE5-91D2-66ABA921F526}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CA3D00B7-A200-4CE5-91D2-66ABA921F526}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CA3D00B7-A200-4CE5-91D2-66ABA921F526}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CA3D00B7-A200-4CE5-91D2-66ABA921F526}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
