@@ -1,0 +1,18 @@
+<div class="container">
+    <div class="btn-group btn-group-toggle pb-2" data-toggle="buttons">
+      <label class="btn btn-secondary" [ngClass]="{active: pessoaSelecionada == 'F'}">
+        <input type="radio" name="options" id="option1" (click)="pessoaSelecionada = 'F'"
+          [checked]="pessoaSelecionada == 'F'"> Pessoa Física
+      </label>
+      <label class="btn btn-secondary" [ngClass]="{active: pessoaSelecionada == 'J'}">
+        <input type="radio" name="options" id="option2" (click)="pessoaSelecionada = 'J'"
+          [checked]="pessoaSelecionada == 'J'"> Pessoa Jurídica
+      </label>
+    </div>
+    <div *ngIf="pessoaSelecionada == 'F'">
+      <cc-pessoa-fisica></cc-pessoa-fisica>
+    </div>
+    <div *ngIf="pessoaSelecionada == 'J'">
+      <cc-pessoa-juridica></cc-pessoa-juridica>
+    </div>
+</div>
