@@ -2,6 +2,7 @@
 using cadastro_conta.webapi.Models;
 using cadastro_conta.webapi.Services;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Logging;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
 using System;
@@ -13,6 +14,7 @@ namespace cadastro_conta.test.Controllers
     public class ClientesControllerTest
     {
         private Mock<IClienteService> clienteService;
+        private Mock<ILogger<ClientesController>> logger;
         private Cliente jose;
 
         [TestInitialize]
@@ -47,7 +49,7 @@ namespace cadastro_conta.test.Controllers
         [TestMethod]
         public void CreateTest_201()
         {
-            ClientesController clientesController = new ClientesController(clienteService.Object);
+            ClientesController clientesController = new ClientesController(clienteService.Object, logger.Object);
 
             Cliente pedro = new Cliente();
 
