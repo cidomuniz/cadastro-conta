@@ -1,4 +1,4 @@
-﻿using cadastro_conta.webapi.Entities;
+﻿using cadastro_conta.webapi.Models;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Diagnostics;
 using Microsoft.AspNetCore.Http;
