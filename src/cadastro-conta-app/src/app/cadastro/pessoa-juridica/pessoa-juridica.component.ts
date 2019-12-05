@@ -19,7 +19,7 @@ export class PessoaJuridicaComponent implements OnInit {
     private cadastroService: CadastroService,
     private router: Router,
     private formBuilder: FormBuilder
-    ) { }
+  ) { }
 
   ngOnInit(): void {
     this.cadastroForm = this.formBuilder.group({
@@ -84,18 +84,18 @@ export class PessoaJuridicaComponent implements OnInit {
     });
   }
 
-  submit(){
+  submit() {
     this.loading = true;
 
     const newCadastro = this.cadastroForm.getRawValue() as Cliente
     console.log(newCadastro);
 
     this.cadastroService
-            .inserirCliente(newCadastro)
-            .subscribe(
-                () => { this.loading = false; this.router.navigate(['sucesso']) },
-                err => { this.loading = false; this.router.navigate(['erro']) }
-            );
+      .inserirCliente(newCadastro)
+      .subscribe(
+        () => { this.loading = false; this.router.navigate(['sucesso']) },
+        err => { this.loading = false; this.router.navigate(['erro']) }
+      );
   }
 
 }

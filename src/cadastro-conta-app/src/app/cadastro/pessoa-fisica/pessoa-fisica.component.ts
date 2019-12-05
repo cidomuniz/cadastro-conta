@@ -19,7 +19,7 @@ export class PessoaFisicaComponent implements OnInit {
     private cadastroService: CadastroService,
     private router: Router,
     private formBuilder: FormBuilder
-    ) { }
+  ) { }
 
   ngOnInit(): void {
     this.cadastroForm = this.formBuilder.group({
@@ -94,17 +94,17 @@ export class PessoaFisicaComponent implements OnInit {
     });
   }
 
-  submit(){
+  submit() {
     this.loading = true;
 
     const newCadastro = this.cadastroForm.getRawValue() as Cliente;
     console.log(newCadastro);
     this.cadastroService
-            .inserirCliente(newCadastro)
-            .subscribe(
-              () => { this.loading = false; this.router.navigate(['']) },
-              err => { this.loading = false; console.log(err) }
-            );
+      .inserirCliente(newCadastro)
+      .subscribe(
+        () => { this.loading = false; this.router.navigate(['sucesso']) },
+        err => { this.loading = false; this.router.navigate(['erro']) }
+      );
   }
 
 }
