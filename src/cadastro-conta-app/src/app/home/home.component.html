@@ -1,0 +1,7 @@
+<div class="container">
+  <div class="d-flex justify-content-center">
+    <button type="button" class="btn btn-outline-primary btn-lg btn-block" *ngIf="!cadastro"
+      (click)="cadastro = true">Cadastrar</button>
+  </div>
+</div>
+<cc-cadastro *ngIf="cadastro"></cc-cadastro>

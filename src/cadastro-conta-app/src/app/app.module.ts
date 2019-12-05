@@ -11,6 +11,9 @@ import { PessoaJuridicaComponent } from './cadastro/pessoa-juridica/pessoa-jurid
 import { CadastroService } from './cadastro/cadastro.service';
 
 import { NgxMaskModule } from 'ngx-mask';
+import { SucessoComponent } from './cadastro/sucesso/sucesso.component';
+import { ErroComponent } from './cadastro/erro/erro.component';
+import { HomeComponent } from './home/home.component';
 
 
 @NgModule({
@@ -18,15 +21,18 @@ import { NgxMaskModule } from 'ngx-mask';
     AppComponent,
     CadastroComponent,
     PessoaFisicaComponent,
-    PessoaJuridicaComponent
+    PessoaJuridicaComponent,
+    SucessoComponent,
+    ErroComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
-    NgxMaskModule.forRoot()
+    NgxMaskModule.forRoot(),
+    AppRoutingModule
   ],
   providers: [
     CadastroService

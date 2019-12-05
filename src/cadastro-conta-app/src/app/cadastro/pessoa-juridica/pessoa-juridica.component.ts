@@ -93,8 +93,8 @@ export class PessoaJuridicaComponent implements OnInit {
     this.cadastroService
             .inserirCliente(newCadastro)
             .subscribe(
-                () => { this.loading = false; this.router.navigate(['']) },
-                err => { this.loading = false; console.log(err) }
+                () => { this.loading = false; this.router.navigate(['sucesso']) },
+                err => { this.loading = false; this.router.navigate(['erro']) }
             );
   }
 
