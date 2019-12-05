@@ -1,3 +1,4 @@
-# cadastro-conta-webapi
+# cadastro-conta
+Simple customer registration for credit.
 
-repositorio
+Project made with Angular, .NET Core and MongoDB.
