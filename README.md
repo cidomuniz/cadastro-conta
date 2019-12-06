@@ -6,6 +6,7 @@ Project made with Angular, .NET Core and MongoDB.
 1. [ Requirements. ](#req)
 2. [ Front-End. ](#front)
 3. [ API. ](#api)
+4. [ Live test. ](#live)
 
 <a name="req"></a>
 ## Requirements
@@ -64,7 +65,7 @@ Recupar um cliente
 GET /clientes/:id
 ```
 ```
-Criarum cliente
+Criar um cliente
 POST /clientes
 {
 	"tipo": "PF",
@@ -82,4 +83,19 @@ POST /clientes
 	"renda": 2323.88,
 	"telefone": "11944539918"
 }
+```
+<a name="live"></a>
+## Live test
+Hosted on AWS
+```
+Front-end
+http://3.228.144.7:4200/
+```
+```
+Recuperar todos os clientes
+curl -X GET http://3.228.144.7:5000/api/clientes
+```
+```
+Recupar um cliente
+curl -X GET http://3.228.144.7:5000/api/clientes/5de9c25897a2470001daa665
 ```
