@@ -15,7 +15,7 @@ Node.js 6.x, SDK Docker, Docker-Compose
 docker-compose up
 ```
 
-## Front-End
+## Front-End Local
 ```
 http://localhost:4200/
 ```
