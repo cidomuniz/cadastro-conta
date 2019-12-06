@@ -1,9 +1,5 @@
 version: "3.5"
 
-networks:
-  localdev:
-    name: localdev
-
 services:
   angular-service: 
       container_name: angularcontainer  
