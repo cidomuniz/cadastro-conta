@@ -3,7 +3,7 @@ import { HttpClient, HttpParams } from '@angular/common/http';
 
 import { Cliente } from './cliente';
 
-const API_URL = "http://localhost:63134/api/clientes";
+const API_URL = "http://localhost:5000/api/clientes";
 
 @Injectable()
 export class CadastroService {

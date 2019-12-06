@@ -17,7 +17,7 @@ namespace cadastro_conta.webapi
             try
             {
                 logger.Debug("init main");
-                CreateHostBuilder(args).Build().Run();
+                CreateWebHostBuilder(args).Build().Run();
             }
             catch (Exception exception)
             {
@@ -29,30 +29,18 @@ namespace cadastro_conta.webapi
             {
                 NLog.LogManager.Shutdown();
             }
-            CreateHostBuilder(args).Build().Run();
         }
-
-        public static IHostBuilder CreateHostBuilder(string[] args) =>
-        Host.CreateDefaultBuilder(args)
-            .ConfigureWebHostDefaults(webBuilder =>
-            {
-                webBuilder.UseStartup<Startup>();
-            })
-            .ConfigureLogging(logging =>
-            {
-                logging.ClearProviders();
-                logging.SetMinimumLevel(Microsoft.Extensions.Logging.LogLevel.Trace);
-            })
-            .UseNLog();  // NLog: Setup NLog for Dependency injection
-
+        
         public static IWebHostBuilder CreateWebHostBuilder(string[] args) =>
         WebHost.CreateDefaultBuilder(args)
-            .UseStartup<Startup>()
             .ConfigureLogging(logging =>
             {
                 logging.ClearProviders();
                 logging.SetMinimumLevel(Microsoft.Extensions.Logging.LogLevel.Trace);
             })
-            .UseNLog();  // NLog: setup NLog for Dependency injection
+            .UseNLog()
+            .UseKestrel()
+            .UseUrls("http://0.0.0.0:5000")
+            .UseStartup<Startup>();  // NLog: setup NLog for Dependency injection
     }
 }
