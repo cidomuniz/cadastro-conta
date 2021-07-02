@@ -77,25 +77,10 @@ POST /clientes
 	"dataNascimento": "1997-01-21",
 	"estado": "SP",
 	"estadoCivil": "casado",
-	"nome": "APARECIDO DE OLIVEIRA MUNIZ",
+	"nome": "LEO OLI",
 	"numero": "156",
 	"pais": "Brasil",
 	"renda": 2323.88,
-	"telefone": "11944539918"
+	"telefone": "11945687539"
 }
-```
-<a name="live"></a>
-## Live test
-Hosted on AWS
-```
-Front-end
-http://3.228.144.7:4200/
-```
-```
-Recuperar todos os clientes
-curl -X GET http://3.228.144.7:5000/api/clientes
-```
-```
-Recupar um cliente
-curl -X GET http://3.228.144.7:5000/api/clientes/5de9c25897a2470001daa665
 ```
